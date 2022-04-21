@@ -1,17 +1,9 @@
 package com.example.restservice.greeting;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-
-@Component
+//@Component
 public class Greeting {
-
-
-
-    private Congratulation congratulation;
-
     private final long id;
-    private final String content;
+    private String content;
 
     public Greeting(long id, String content) {
         this.id = id;
@@ -23,15 +15,10 @@ public class Greeting {
     }
 
     public String getContent() {
-        if (!(congratulation ==null)) {
-            return content + " " + congratulation.happyBirthday();
-        } else {
-            return content;
-        }
+        return content;
     }
 
-    @Autowired
-    public void setCongratulation(Congratulation congratulation) {
-        this.congratulation = congratulation;
+    public void setContent(String content) {
+        this.content = content;
     }
 }
