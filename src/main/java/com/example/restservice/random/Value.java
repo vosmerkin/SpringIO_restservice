@@ -1,8 +1,6 @@
 package com.example.restservice.random;
 
 public class Value {
-
-
     private final long id;
     private final String quote;
 

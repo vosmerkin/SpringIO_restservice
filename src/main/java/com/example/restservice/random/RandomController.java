@@ -12,10 +12,11 @@ public class RandomController {
 
 
     private final AtomicLong counter = new AtomicLong();
+    private Value value;
 
 
     @GetMapping("/random")
     public Random random(@RequestParam(value = "successORfault", defaultValue = "success") String typeOfResult) {
-        return new Random( typeOfResult, counter.incrementAndGet() );
+        return new Random(typeOfResult, new Value(counter.incrementAndGet(), typeOfResult));
     }
 }
