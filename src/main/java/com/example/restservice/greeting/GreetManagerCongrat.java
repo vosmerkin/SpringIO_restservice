@@ -2,7 +2,7 @@ package com.example.restservice.greeting;
 
 import java.util.concurrent.atomic.AtomicLong;
 
-public class GreetCongratManager implements GreetManager {
+public class GreetManagerCongrat implements GreetManager {
     private final AtomicLong counter = new AtomicLong();
     private static final String template = "Hello, %s!";
 
